@@ -1,0 +1,39 @@
+<p>enchere works!</p>
+<div class="container">
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th colspan="7" style="text-align: center;">
+                        Enchère
+                    </th>                    
+                    <th colspan="1" style="text-align: center;">
+                        Expéditeur
+                    </th>                    
+                </tr>
+                <tr>
+                    <th>Statut</th>                    
+                    <th>Fin publication</th>                    
+                    <th>Marchandise</th>                    
+                    <th>Ville Départ</th>                   
+                    <th>Ville Arrivée</th>                    
+                    <th>Unité de prix</th>                    
+                    <th>Prix unitaire</th>                    
+                    <th>Nom</th>                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let enc of encheresavecexpediteurs">
+                    <td>{{enc.statut}}</td>                    
+                    <td>{{enc.finpublication}}</td>                    
+                    <td>{{enc.marchandise}}</td>                    
+                    <td>{{enc.villedepart}}</td>                    
+                    <td>{{enc.villearrivee}}</td>                    
+                    <td>{{enc.uniteprix}}</td>                    
+                    <td>{{enc.prixunitaire}}</td>                    
+                    <td>{{enc.nom}}</td>                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

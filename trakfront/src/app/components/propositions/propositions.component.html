@@ -1,0 +1,27 @@
+<p>propositions works!</p>
+<div class="container">
+    <div class="table-responsive col-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Index</th>                    
+                    <th>Statut</th>                    
+                    <th>Prix unitaire</th>                    
+                    <th>Commentaires</th>                    
+                    <th>Date</th>                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let prop of propositions" >
+                    <td>{{prop.id}}</td>                    
+                    <td>{{prop.statut}}</td>                    
+                    <td>{{prop.prixunitaire}}</td>                    
+                    <td>{{prop.commentaire}}</td>                    
+                    <td>{{prop.date}}</td>                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br /><br /><br />
+    <a class="nav-link" routerLink="/mesencheres">Mes enchères</a>
+</div>

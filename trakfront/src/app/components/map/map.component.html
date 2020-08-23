@@ -1,0 +1,73 @@
+<div class="row">
+    <div class="col-5">
+        <form class="form-inline">
+            <i class="fas fa-search" aria-hidden="true"></i>
+            <input class="form-control form-control-sm ml-3 w-20" type="text" placeholder="Depart" aria-label="Depart">
+            <input class="form-control form-control-sm ml-3 w-20" type="text" placeholder="Destination" aria-label="Destination">
+        </form>
+        <div class="media text-muted pt-3">
+            <svg height="100px" width="50px">
+            <ellipse cx="10" cy="10" rx="2" ry="2" style="fill:black;stroke:black;stroke-width:2" />
+            <line x1="10" y1="10" x2="10" y2="80" style="fill:gray;stroke:deepskyblue;stroke-width:2" />
+            <ellipse cx="10" cy="80" rx="2" ry="2" style="fill:black;stroke:black;stroke-width:2" />
+            </svg>
+            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+            <strong class="d-inline text-gray-dark"><span></span>Rabat 11:30 AM</strong>
+            <span class="d-block text-gray"></span>
+            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+            <strong class="d-block text-gray-dark">Casablanca 01:00 PM </strong>
+            </p>
+        </div>
+        <div class="media text-muted pt-3">
+            <svg height="100px" width="50px">
+            <ellipse cx="10" cy="10" rx="2" ry="2" style="fill:black;stroke:black;stroke-width:2" />
+            <line x1="10" y1="10" x2="10" y2="80" style="fill:gray;stroke:deepskyblue;stroke-width:2" />
+            <ellipse cx="10" cy="80" rx="2" ry="2" style="fill:black;stroke:black;stroke-width:2" />
+            </svg>
+            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+            <strong class="d-inline text-gray-dark"><span></span>Rabat 11:30 AM</strong>
+            <span class="d-block text-gray"></span>
+            <span class="d-block text-gray"></span>
+            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+            <strong class="d-block text-gray-dark">Casablanca 01:00 PM </strong>
+            </p>
+        </div>
+        <div class="media text-muted pt-3">
+            <svg height="100px" width="50px">
+            <ellipse cx="10" cy="10" rx="2" ry="2" style="fill:black;stroke:black;stroke-width:2" />
+            <line x1="10" y1="10" x2="10" y2="80" style="fill:gray;stroke:deepskyblue;stroke-width:2" />
+            <ellipse cx="10" cy="80" rx="2" ry="2" style="fill:black;stroke:black;stroke-width:2" />
+            </svg>
+            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+            <strong class="d-inline text-gray-dark"><span></span>Rabat 11:30 AM</strong>
+            <span class="d-block text-gray"></span>
+            <span class="d-block text-gray"></span>
+            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+            <strong class="d-block text-gray-dark">Casablanca 01:00 PM </strong>
+            </p>
+        </div>
+        <div class="media text-muted pt-3">
+            <svg height="100px" width="50px">
+            <ellipse cx="10" cy="10" rx="2" ry="2" style="fill:black;stroke:black;stroke-width:2" />
+            <line x1="10" y1="10" x2="10" y2="80" style="fill:gray;stroke:deepskyblue;stroke-width:2" />
+            <ellipse cx="10" cy="80" rx="2" ry="2" style="fill:black;stroke:black;stroke-width:2" />
+            </svg>
+            <p class="media-body pb-3 mb-0 small lh-125 border-bottom border-gray">
+            <strong class="d-inline text-gray-dark"><span></span>Rabat 11:30 AM</strong>
+            <span class="d-block text-gray"></span>
+            <span class="d-block text-gray"></span>
+            Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+            <strong class="d-block text-gray-dark">Casablanca 01:00 PM </strong>
+            </p>
+        </div>
+        <small class="d-block text-right mt-3">
+            <a href="#">All updates</a>
+        </small>
+    </div>
+    <div class="col-7">
+        <agm-map [latitude]="lat" [longitude]="lng">
+            <agm-marker *ngFor="let loc of locations" [latitude]="loc.lat" [longitude]="loc.lng"></agm-marker>
+        </agm-map>
+    </div>
+</div>
+

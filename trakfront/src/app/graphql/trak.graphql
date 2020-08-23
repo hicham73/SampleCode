@@ -1,0 +1,23 @@
+query getUsers {
+  getUsers {
+    id
+    nom,
+    prenom,
+    email,
+    type
+  }
+}
+
+mutation createUser($userInput: UserInput!) { 
+    createUser(userInput: $userInput) {
+        id 
+        nom
+    }  
+}
+
+mutation updateUser($userInput: UserInput!) { 
+    updateUser(userInput: $userInput) {
+        id 
+        nom
+    }  
+}

@@ -1,0 +1,27 @@
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="border-0">Statut</th>
+                <th class="border-0">Départ</th>
+                <th class="border-0">Arrivée</th>
+                <th class="border-0">Marchandise</th>
+                <th class="border-0">Dates</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let offre of offres">
+            <td>{{offre.isActive}}</td>
+            <td>{{offre.villedepart}}</td>
+            <td>{{offre.villearrivee}}</td>
+            <td>{{offre.isActive}}</td>
+            <td>{{offre.isActive}}</td>
+
+            <td>
+                <span class="badge badge-pill badge-primary">{{v.status}}</span>
+            </td>
+            <td>{{v.heure}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div> 

@@ -1,0 +1,160 @@
+<div class="container">
+    <div class="table-responsive col-12">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>1..n</th>                    
+                    <th>Statut</th>                    
+                    <th>Marchandise</th>                    
+                    <th>Volume</th>                    
+                    <th>Départ</th>                   
+                    <th>Arrivée</th>                    
+                    <th>Unit. Prix</th>                    
+                    <th>Prix unitaire</th>                    
+                    <th>Commentaire</th>                    
+                    <th>Publiée, le</th>                    
+                    <th>Retirée, le</th>                    
+                    <th>Bidding</th>                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let enc of encheres" (click)="selectEnchere(enc)" >
+                    <td>{{enc.id}}</td>                    
+                    <td>{{enc.statut}}</td>                    
+                    <td>{{enc.marchandise}}</td>                    
+                    <td>{{enc.volume}}</td>                    
+                    <td>{{enc.villedepart}}</td>                    
+                    <td>{{enc.villearrivee}}</td>                    
+                    <td>{{enc.uniteprix}}</td>                    
+                    <td>{{enc.prixunitaire}}</td>                    
+                    <td>{{enc.commentaire}}</td>                    
+                    <td>{{enc.debutpublication}}</td>                    
+                    <td>{{enc.finpublication}}</td>                    
+                    <td>{{enc.nombrepropositions}}</td>                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<br /><br /><br />
+<a class="nav-link" routerLink="/propositions">Les propositions</a>
+<br /><br /><br />
+<div class="container">
+    <form class="needs-validation" novalidate>
+        <div class="row">
+            <div class="col-5 mb-6">
+                <label for="id">Id (???)</label>
+                <input type="text" [(ngModel)]="enchere.id" name="id" class="form-control" id="id" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                Vous devez renseigner un index.
+                </div>
+            </div> 
+        </div>
+        <div class="row">
+            <div class="col-5 mb-6">
+                <label for="marchandise">Statut</label>
+                <input type="text" [(ngModel)]="enchere.statut" name="statut" class="form-control" id="statut" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                Vous devez renseigner le statut de l'enchère.
+                </div>
+            </div> 
+        </div>
+        <div class="row">
+            <div class="col-5 mb-6">
+                <label for="marchandise">Marchandise, Produit à transporter</label>
+                <input type="text" [(ngModel)]="enchere.marchandise" name="marchandise" class="form-control" id="marchandise" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                Vous devez renseigner le type de produit à transporter.
+                </div>
+            </div> 
+            <div class="col-2 mb-6">
+                &nbsp;&nbsp;
+            </div> 
+            <div class="col-5 mb-6">
+                <label for="volume">Volume/Capacité</label>
+                <input type="text" [(ngModel)]="enchere.volume" name="volume" class="form-control" id="volume" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                    Vous devez renseigner le volume prévu (valeur+unité).
+                </div>
+            </div>             
+        </div>
+        <div class="row">
+            <div class="col-5 mb-6">
+                <label for="villedepart">Départ</label>
+                <input type="text" [(ngModel)]="enchere.villedepart" name="villedepart" class="form-control" id="villedepart" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                Vous devez renseigner le point de départ.
+                </div>
+            </div> 
+            <div class="col-2 mb-6">
+                &nbsp;&nbsp;
+            </div> 
+            <div class="col-5 mb-6">
+                <label for="villearrivee">Arrivée</label>
+                <input type="text" [(ngModel)]="enchere.villearrivee" name="villearrivee" class="form-control" id="villearrivee" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                    Vous devez renseigner la destination du voyage.
+                </div>
+            </div>             
+        </div>
+        <div class="row">
+            <div class="col-5 mb-6">
+                <label for="uniteprix">Unité facturable</label>
+                <input type="text" [(ngModel)]="enchere.uniteprix" name="uniteprix" class="form-control" id="uniteprix" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                Vous devez renseigner l'unité facturable.
+                </div>
+            </div> 
+            <div class="col-2 mb-6">
+                &nbsp;&nbsp;
+            </div> 
+            <div class="col-5 mb-6">
+
+                <label for="prixunitaire">Prix unitaire</label>
+                <input type="text" [(ngModel)]="enchere.prixunitaire" name="prixunitaire" class="form-control" id="prixunitaire" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                Vous devez renseigner le prix unitaire.
+                </div>
+            </div>             
+        </div>
+        <div class="row">
+            <div class="col-10 mb-6">
+                <label for="commentaire">Commentaires</label>
+                <input type="textearea" [(ngModel)]="enchere.commentaire" name="commentaire" class="form-control" id="commentaire" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                Vous devez renseigner toute information utile à la prise de l'enchère.
+                </div>
+            </div> 
+        </div>
+
+        <div class="row">
+            <div class="col-5 mb-6">
+
+                <label for="debutpublication">Publiée le</label>
+                <input type="text" [(ngModel)]="enchere.debutpublication" name="debutpublication" class="form-control" id="debutpublication" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                Vous devez renseigner la date de publication.
+                </div>
+            </div>
+            <div class="col-2 mb-6">
+                &nbsp;&nbsp;
+            </div> 
+            <div class="col-5 mb-6">
+
+                <label for="finpublication">Fin publication</label>
+                <input type="text" [(ngModel)]="enchere.finpublication" name="finpublication" class="form-control" id="finpublication" placeholder="" value="" required>
+                <div class="invalid-feedback">
+                    Vous devez renseigner la date de fin de publication.
+                </div>
+            </div>             
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mb-3"><button (click)="createEnchere()" class="btn btn-primary btn-block">Nouvelle</button></div>
+            <div class="col-md-4 mb-3"><button (click)="updateEnchere()" class="btn btn-primary btn-block">Enregistrer</button></div>
+            <div class="col-md-4 mb-3"><button (click)="deleteUser()" class="btn btn-primary btn-block">Supprimer</button></div>
+
+          </div>        
+
+    </form>
+</div>
